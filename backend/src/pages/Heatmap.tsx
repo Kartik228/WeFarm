@@ -70,7 +70,7 @@ export default function Heatmap() {
         </p>
       </header>
 
-      {/* ✅ BACK TO DASHBOARD BUTTON (TOP) */}
+      {/* Back to Dashboard */}
       <div style={{ textAlign: "center", margin: "20px 0" }}>
         <Button variant="outline" size="lg" onClick={goToDashboard}>
           ← Back to Dashboard
@@ -155,6 +155,28 @@ export default function Heatmap() {
               </div>
             </div>
           </div>
+        </div>
+      )}
+
+      {/* 👉 TREATMENT BUTTON (BOTTOM – ALWAYS VISIBLE) */}
+      {center && (
+        <div
+          style={{
+            position: "sticky",
+            bottom: "20px",
+            display: "flex",
+            justifyContent: "center",
+            margin: "40px 0",
+            zIndex: 999,
+          }}
+        >
+          <Button
+            size="lg"
+            className="bg-green-600 hover:bg-green-700 w-full max-w-md"
+            onClick={() => navigate("/treatment")}
+          >
+            🌱 View Treatment Recommendations
+          </Button>
         </div>
       )}
     </div>
